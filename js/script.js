@@ -1,9 +1,4 @@
 
-
-
-
-
-
 (function ($) {
     $(document).ready(function () {
         /* Табулятор */
@@ -39,6 +34,13 @@
          /*   tabsContent.height(tabsContent.find('.active').outerHeight());*/
             // По клику на заголовке вкладки
             tabsTitlesItems.on('click', function () {
+                console.log($(this).text());
+                $(".main_navigation_last_li a").css({'color' : '#4377A7'});
+
+                $(".nav_new_li").each(function () {
+                    $(this).remove();
+                });
+                $(".main_navigation_last_li").after('<li class="nav_new_li">/</li><li class="nav_new_li">' + $(this).text() + '</li>');
                 $("#payment_method_text_bottom").hide();
                 $(this).addClass('active');
                 tabsContentTabs.eq($(this).index()).addClass('active').show();
