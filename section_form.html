@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" crossorigin="anonymous">
+    <title>section_form</title>
+</head>
+<body>
+<section class="section_form d-flex">
+        <form class="form">
+                <div class="form-group">
+                    
+                        <label for="name" class="body_text">Ваше имя</label>
+                        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Василий">
+                      </div>
+                      <div class="form-group">
+                    
+                            <label for="telefone" class="body_text">Номер телефона</label>
+                            <input type="tel" class="form-control"  aria-describedby="telefone" placeholder="+375295012433" id="telefone" pattern="\+{1,1}375[0-9]{6,9}">
+                          </div>
+                <div class="form-group">
+                    
+                  <label for="email" class="body_text">Адрес электронной почты</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="vasily.ivanov@gmail.com">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px">
+                <label for="textarea" class="form_label body_text">Сообщение </label><br>
+                    <textarea id="textarea" placeholder="Сообщение" onfocus="if (this.placeholder == 'Сообщение') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Сообщение';}"></textarea>
+                    
+                </div>
+                <p class="form_text">Отправляя запрос, вы подтверждаете, что ознакомлены и согласны с нашими <span>Условиями Пользования</span> и <span>Политикой Конфиденциальности</span></p>
+                <button type="submit" class="btn btn-primary  btn-block"><span class="button_text">Отправить запрос</span></button>
+              </form>
+             <div class="section_form_block">
+            <h2>Нет времени на поиск?</h2>
+            <p  class="body_text">Оставьте заявку! Мы подберем вам лучшее предложение!</p>
+        </div>
+        <div class="background_image">
+          <div class="background_image_wrap"><svg width="1440" height="176" viewBox="0 0 1440 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <path d="M221.228 112.865C224.479 111.512 227.966 110.815 231.488 110.815C235.01 110.815 238.497 111.512 241.748 112.865L369.502 166.111L497.248 112.865C500.5 111.512 503.986 110.816 507.509 110.816C511.031 110.816 514.518 111.512 517.769 112.865L645.516 166.111L773.262 112.865C776.513 111.512 780.001 110.815 783.523 110.815C787.045 110.815 790.532 111.512 793.783 112.865L921.536 166.111L1049.28 112.865C1052.53 111.512 1056.02 110.816 1059.54 110.816C1063.07 110.816 1066.55 111.512 1069.8 112.865L1197.55 166.111L1325.3 112.865C1328.55 111.512 1332.04 110.815 1335.56 110.815C1339.08 110.815 1342.57 111.512 1345.82 112.865L1440 152.115V43.5252L1335.56 0L1207.81 53.2402C1204.56 54.5949 1201.08 55.2925 1197.55 55.2925C1194.03 55.2925 1190.54 54.5949 1187.29 53.2402L1059.54 0L931.793 53.2402C928.543 54.596 925.056 55.2941 921.533 55.2941C918.011 55.2941 914.523 54.596 911.273 53.2402L783.526 0L655.78 53.2402C652.529 54.596 649.041 55.2941 645.519 55.2941C641.996 55.2941 638.509 54.596 635.259 53.2402L507.505 0L379.759 53.2402C376.508 54.596 373.021 55.2941 369.498 55.2941C365.976 55.2941 362.488 54.596 359.238 53.2402L231.492 0L127.052 47.0833V155.673L221.228 112.865Z" fill="#0578AA"/>
+            <path d="M-602.824 114.753C-599.573 113.4 -596.086 112.704 -592.564 112.704C-589.042 112.704 -585.554 113.4 -582.303 114.753L-454.557 168L-326.81 114.753C-323.559 113.4 -320.071 112.704 -316.549 112.704C-313.027 112.704 -309.54 113.4 -306.289 114.753L-178.536 168L-50.7893 114.753C-47.5381 113.401 -44.0513 112.704 -40.5292 112.704C-37.0072 112.704 -33.5197 113.401 -30.2685 114.753L97.478 168L225.225 114.753C228.476 113.4 231.963 112.704 235.485 112.704C239.007 112.704 242.494 113.4 245.745 114.753L373.499 168L501.245 114.753C504.497 113.401 507.983 112.704 511.505 112.704C515.027 112.704 518.515 113.401 521.766 114.753L615.942 154.004V45.4141L511.502 1.88884L383.756 55.1291C380.505 56.4838 377.018 57.1813 373.496 57.1813C369.973 57.1813 366.486 56.4838 363.235 55.1291L235.488 1.88884L107.748 55.1291C104.498 56.4848 101.01 57.1829 97.4873 57.1829C93.9648 57.1829 90.4776 56.4848 87.2272 55.1291L-40.5261 1.88884L-168.273 55.1291C-171.523 56.4848 -175.01 57.1829 -178.533 57.1829C-182.055 57.1829 -185.543 56.4848 -188.793 55.1291L-316.54 1.88884L-444.287 55.1291C-447.537 56.4848 -451.025 57.1829 -454.547 57.1829C-458.07 57.1829 -461.557 56.4848 -464.807 55.1291L-592.561 1.88884L-697 45.4141V154.004L-602.824 114.753Z" fill="#0578AA"/>
+            </g>
+            <defs>
+            <filter id="filter0_d" x="-701" y="0" width="2145" height="176" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset dy="4"/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.466667 0 0 0 0 0.654902 0 0 0 0.5 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+            </svg>
+            
+            <svg width="1440" height="175" viewBox="0 0 1440 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d)">
+              <path d="M221.231 113.469C224.482 112.108 227.97 111.408 231.492 111.408C235.014 111.408 238.501 112.108 241.752 113.469L369.505 167L497.251 113.469C500.502 112.108 503.989 111.408 507.511 111.408C511.033 111.408 514.521 112.108 517.772 113.469L645.518 167L773.264 113.469C776.515 112.108 780.003 111.408 783.525 111.408C787.047 111.408 790.534 112.108 793.785 113.469L921.538 167L1049.28 113.469C1052.54 112.109 1056.02 111.408 1059.54 111.408C1063.07 111.408 1066.55 112.109 1069.8 113.469L1197.55 167L1325.3 113.469C1328.55 112.108 1332.04 111.408 1335.56 111.408C1339.08 111.408 1342.57 112.108 1345.82 113.469L1440 152.929V43.7581L1335.56 0L1207.83 53.5504C1204.58 54.9124 1201.1 55.6137 1197.57 55.6137C1194.05 55.6137 1190.56 54.9124 1187.31 53.5504L1059.56 0.0252668L931.814 53.5504C928.564 54.9134 925.076 55.6152 921.553 55.6152C918.031 55.6152 914.544 54.9134 911.293 53.5504L783.547 0.0252668L655.8 53.5504C652.55 54.9134 649.063 55.6152 645.54 55.6152C642.018 55.6152 638.53 54.9134 635.28 53.5504L507.527 0.0252668L379.781 53.5504C376.531 54.9134 373.043 55.6152 369.52 55.6152C365.998 55.6152 362.511 54.9134 359.26 53.5504L231.513 0.0252668L127.075 45.4536V152.929L221.231 113.469Z" fill="#0099D2"/>
+              <path d="M-602.818 113.469C-599.567 112.108 -596.08 111.408 -592.558 111.408C-589.036 111.408 -585.548 112.108 -582.297 113.469L-454.551 167L-326.805 113.469C-323.554 112.108 -320.066 111.408 -316.544 111.408C-313.022 111.408 -309.535 112.108 -306.284 113.469L-178.531 167L-50.785 113.469C-47.5339 112.108 -44.047 111.408 -40.5249 111.408C-37.0028 111.408 -33.5153 112.108 -30.2642 113.469L97.4819 167L225.228 113.469C228.479 112.108 231.967 111.408 235.489 111.408C239.011 111.408 242.498 112.108 245.749 113.469L373.502 167L501.248 113.469C504.499 112.109 507.986 111.408 511.508 111.408C515.03 111.408 518.518 112.109 521.769 113.469L615.944 154.607V45.4492L511.505 0L383.759 53.5504C380.508 54.9124 377.021 55.6137 373.499 55.6137C369.976 55.6137 366.489 54.9124 363.238 53.5504L235.492 0.0252668L107.752 53.5504C104.501 54.9134 101.014 55.6152 97.4912 55.6152C93.9687 55.6152 90.4816 54.9134 87.2311 53.5504L-40.5219 0.0252668L-168.274 53.5504C-171.525 54.9134 -175.012 55.6152 -178.535 55.6152C-182.057 55.6152 -185.544 54.9134 -188.795 53.5504L-316.535 0L-444.287 53.5504C-447.538 54.9134 -451.025 55.6152 -454.548 55.6152C-458.071 55.6152 -461.558 54.9134 -464.809 53.5504L-592.561 0.0252668L-697 43.7834V152.929L-602.818 113.469Z" fill="#0099D2"/>
+              </g>
+              <defs>
+              <filter id="filter0_d" x="-701" y="0" width="2145" height="175" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+              <feOffset dy="4"/>
+              <feGaussianBlur stdDeviation="2"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0.262745 0 0 0 0 0.466667 0 0 0 0 0.654902 0 0 0 0.5 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+              </filter>
+              </defs>
+              </svg>
+              
+              </div>
+          
+        </div>
+</section>
+
+
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="js/jquery-3.4.1.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+     <script src="js/script.js" ></script>-->
+</body>
+</html>
+    
+
+   
+   
+
