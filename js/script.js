@@ -1,15 +1,14 @@
-
-(function ($) {
-    $(document).ready(function () {
+(function($) {
+    $(document).ready(function() {
         /* Табулятор */
 
         // Для каждого табулятора на странице
-        $('.lp-tabs').each(function () {
+        $('.lp-tabs').each(function() {
             // Помещаем корневой div в переменную tabs 
             var tabs = $(this),
                 tabsTitlesNames = []; // А также объявляем массив, в котором будем хранить имена вкладок
             // Сохраняем все имена вкладок в массив
-            tabs.find('div[data-tab-title]').each(function () {
+            tabs.find('div[data-tab-title]').each(function() {
                 tabsTitlesNames.push($(this).attr('data-tab-title'));
             }).addClass('lp-tab');
             // Между корневым div и его содержимым добавляем div с классом "lp-tabs-content"
@@ -21,23 +20,23 @@
                 tabsContent = tabs.find('.lp-tabs-content'), // Div с содержимым вкладок
                 tabsContentTabs = tabsContent.find('.lp-tab'); // Набор вкладок
             // Добавляем заголовки вкладок
-            tabsTitlesNames.forEach(function (value) {
+            tabsTitlesNames.forEach(function(value) {
                 tabsTitles.find('ul').append('<li><h5>' + value + '</h5></li>');
             });
             // Помещаем в переменную набор заголовков вкладок
             var tabsTitlesItems = tabsTitles.find('ul li');
             // Добавляем класс "active" первому заголовку
-          /*  tabsTitlesItems.eq(0).addClass('active');*/
+            /*  tabsTitlesItems.eq(0).addClass('active');*/
             // Добавляем класс "active" первой вкладке и отображаем ее
-         /*   tabsContentTabs.eq(0).addClass('active').show();*/
+            /*   tabsContentTabs.eq(0).addClass('active').show();*/
             // Устанавливаем высоту div с содержимым вкладок равной высоте первой вкладки
-         /*   tabsContent.height(tabsContent.find('.active').outerHeight());*/
+            /*   tabsContent.height(tabsContent.find('.active').outerHeight());*/
             // По клику на заголовке вкладки
-            tabsTitlesItems.on('click', function () {
+            tabsTitlesItems.on('click', function() {
                 console.log($(this).text());
-                $(".main_navigation_last_li a").css({'color' : '#4377A7'});
+                $(".main_navigation_last_li a").css({ 'color': '#4377A7' });
 
-                $(".nav_new_li").each(function () {
+                $(".nav_new_li").each(function() {
                     $(this).remove();
                 });
                 $(".main_navigation_last_li").after('<li class="nav_new_li">/</li><li class="nav_new_li">' + $(this).text() + '</li>');
@@ -72,7 +71,7 @@
                         }, 500);
                     }
                     // И параллельно прячем текщую вкладку
-                    curTab.fadeOut(500, function () {
+                    curTab.fadeOut(500, function() {
                         // По окончании анимации
                         // Если высота контента следующей вкладки меньше
                         if (curHeight > nextHeight) {
@@ -82,7 +81,7 @@
                             }, 500);
                         }
                         // И параллельно отображаем следующую вкладку
-                        nextTab.fadeIn(500, function () {
+                        nextTab.fadeIn(500, function() {
                             // По окончании анимации
                             // Удаляем класс "active" у текущей (уже прошлой) вкладки
                             curTab.removeClass('active');
@@ -96,13 +95,28 @@
                 }
             });
             // При изменении размера окна
-            $(window).on('load resize', function () {
+            $(window).on('load resize', function() {
                 // Устанавливаем высоту div с содержимым вкладок равной высоте активной вкладки
                 tabsContent.height(tabsContent.find('.active').outerHeight());
             });
         });
 
-        
+
+        /* меню */
+        $('.menu_open').on('click', function() {
+            $('.navigation').show();
+            /* $('.header_header').css("box-shadow", "none");*/
+            $(this).hide();
+            $('.menu_close').show();
+            let height = $(document).outerHeight() + "px";
+            $('.navigation').css("height", height);
+        });
+        $('.menu_close').on('click', function() {
+            $('.navigation').hide();
+            /*   $('.header_header').css("box-shadow", "none");*/
+            $(this).hide();
+            $('.menu_open').show();
+        });
 
 
     });
