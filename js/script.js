@@ -34,7 +34,7 @@
             // По клику на заголовке вкладки
             tabsTitlesItems.on('click', function() {
                 console.log($(this).text());
-                $(".main_navigation_last_li a").css({ 'color': '#4377A7' });
+                $(".main_navigation_last_li a").css({ 'color': '#47A1D4' });
 
                 $(".nav_new_li").each(function() {
                     $(this).remove();

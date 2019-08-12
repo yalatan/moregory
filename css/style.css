@@ -18,6 +18,7 @@
             font-size: 56px;
             line-height: 120%;
             color: #231F20;
+            margin-bottom: 0;
         }
         
         h2 {
@@ -25,6 +26,7 @@
             font-size: 36px;
             line-height: 41px;
             color: #4377A7;
+            margin-bottom: 0;
         }
         
         h3 {
@@ -35,6 +37,7 @@
             align-items: center;
             letter-spacing: 0.04em;
             color: #231F20;
+            margin-bottom: 0;
         }
         
         h5 {
@@ -45,6 +48,7 @@
             align-items: center;
             text-align: center;
             color: #231F20;
+            margin-bottom: 0;
         }
         
         h6 {
@@ -55,6 +59,7 @@
             text-transform: uppercase;
             font-feature-settings: 'pnum'on, 'lnum'on;
             color: #47A1D4;
+            margin-bottom: 0;
         }
         
         .text-white h6,
@@ -76,21 +81,37 @@
             border: none !important;
         }
         
+        a span.body_text {
+            color: #47A1D4;
+            cursor: pointer;
+        }
+        
+        a:hover span.body_text {
+            color: #4377A7;
+        }
+        
         button {
             border-radius: 10px !important;
+            -webkit-transition: background-color 5s;
+            transition: background-color 5s;
         }
         
         .button_text {
-            font-family: "Helvetica";
+            font-family: "Helvetica Ligth";
             font-size: 14px;
             line-height: 158.49%;
             letter-spacing: 0.04em;
         }
         
+        button:hover {
+            -webkit-transition: background-color 10s;
+            transition: background-color 10s;
+        }
+        
         body {}
         
         .body_text {
-            font-family: "Helvetica";
+            font-family: "Helvetica Ligth";
             font-size: 16px;
             line-height: 141%;
             color: #4F4F4F;
@@ -227,9 +248,11 @@
         .navigation ul {
             width: 1007px;
             margin: auto;
-            padding-right: 96px;
+            /* padding-right: 96px; */
             height: 100%;
             list-style: none;
+            padding-left: 0;
+            justify-content: center;
         }
         
         .navigation ul li {
@@ -255,7 +278,7 @@
         
         .navigation h6 {
             color: white;
-            padding: 0px 30px;
+            padding: 0px 40px;
             width: max-content;
             display: flex;
             align-items: center;
@@ -265,12 +288,26 @@
             padding-top: 5px;
         }
         
+        .navigation_item a {
+            position: relative;
+        }
+        
+        .navigation_item a svg {
+            position: absolute;
+            /* left: 50%;*/
+            top: 150%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+        }
+        
         .dropdown_link h6 {
             height: 60px;
             display: flex;
             align-items: center;
             width: 230px;
             transition: background-color 1s;
+            margin: 0;
         }
         
         .dropdown_link h6:hover {
@@ -360,10 +397,14 @@
             width: 300px;
             height: 50px;
             font-weight: bold;
+            -webkit-transition: background-color 2s;
+            transition: background-color 2s;
         }
         
         .section_hot_tours button:hover {
             background: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);
+            -webkit-transition: background-color 10s;
+            transition: background-color 10s;
         }
         /*section_from_fly */
         
@@ -559,9 +600,10 @@
         
         .form input,
         .form textarea {
-            border: 1px solid #BEC2C3;
+            border: 1px solid rgba(141, 146, 147, 0.2);
             border-radius: 10px;
             padding-left: 25px;
+            outline: none;
         }
         
         .form input::-moz-placeholder,
@@ -569,12 +611,14 @@
         .form input::-webkit-input-placeholder,
         .form input::-ms-input-placeholder,
         .form input::placeholder {
-            color: #BDBDBD;
-            font-family: Helvetica;
+            font-family: "Helvetica Ligth";
             font-size: 16px;
             line-height: 141%;
             display: flex;
             align-items: left;
+            font-size: 16px;
+            line-height: 141%;
+            color: #BEC2C3;
         }
         
         .form textarea::-moz-placeholder,
@@ -582,12 +626,14 @@
         .form textarea::-webkit-input-placeholder,
         .form textarea::-ms-input-placeholder,
         .form textarea::placeholder {
-            color: #BDBDBD;
-            font-family: Helvetica;
+            font-family: "Helvetica Ligth";
             font-size: 16px;
             line-height: 141%;
             display: flex;
             align-items: left;
+            font-size: 16px;
+            line-height: 141%;
+            color: #BEC2C3;
         }
         
         .form input {
@@ -600,8 +646,14 @@
             padding-top: 15px;
         }
         
+        .form input:focus,
+        .form textarea:focus {
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(141, 146, 147, 0.2);
+        }
+        
         .form_text {
-            font-family: Helvetica;
+            font-family: "Helvetica Ligth";
             font-size: 12px;
             line-height: 15px;
             color: #231F20;
@@ -622,10 +674,14 @@
             width: 100%;
             height: 50px;
             font-weight: bold;
+            -webkit-transition: background-color 2s;
+            transition: background-color 2s;
         }
         
         .form button:hover {
             background: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);
+            -webkit-transition: background-color 10s;
+            transition: background-color 10s;
         }
         
         .section_form_block {
@@ -656,8 +712,8 @@
         .background_image_wrap_top {
             margin-top: 245px;
             background: url(/assets/image/waves.png) 100% 100% no-repeat;
-            background-size: auto 175px;
-            height: 175px;
+            background-size: auto 350px;
+            height: 350px;
             background-position-x: center;
         }
         /*section_faq*/
@@ -700,7 +756,7 @@
         }
         
         .next {
-            font-family: Helvetica;
+            font-family: "Helvetica Ligth";
             font-size: 16px;
             line-height: 141%;
             display: flex;
@@ -722,7 +778,7 @@
         }
         
         .author {
-            font-family: Helvetica;
+            font-family: "Helvetica Ligth";
             font-size: 12px;
             line-height: 14px;
             letter-spacing: 0.1em;
@@ -739,10 +795,14 @@
             width: 210px;
             height: 50px;
             font-weight: bold;
+            -webkit-transition: background-color 2s;
+            transition: background-color 2s;
         }
         
         .section_faq button:hover {
             background: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);
+            -webkit-transition: background-color 10s;
+            transition: background-color 10s;
         }
         /*contacts*/
         
@@ -766,7 +826,7 @@
         
         .section_contacts_info p {
             margin-bottom: 7px;
-            margin-top: 10px;
+            margin-top: 7px;
         }
         
         .section_contacts_info .nav {
@@ -785,10 +845,14 @@
             width: 210px;
             height: 50px;
             font-weight: bold;
+            -webkit-transition: background-color 2s;
+            transition: background-color 2s;
         }
         
         .section_contacts_info button:hover {
             background: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);
+            -webkit-transition: background-color 10s;
+            transition: background-color 10s;
         }
         
         .section_contacts_map {
@@ -845,11 +909,15 @@
             display: flex;
             align-items: center;
             color: #4377A7;
+            /* color: #47A1D4;*/
             margin-bottom: 5px;
         }
+        /*.footer_wrapper_div a:hover .footer_text {
+            color: #4377A7;
+        }*/
         
         #footer_section {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
         }
         
         .footer_bottom_text {
@@ -859,6 +927,10 @@
             color: #231F20;
             text-align: right;
             margin-right: 20px;
+        }
+        
+        .footer_bottom_text img {
+            margin: auto 3px auto 0px;
         }
         
         .footer_bottom_text span {
@@ -880,7 +952,7 @@
         
         .main_navigation ul li {
             padding-left: 8px;
-            font-family: Helvetica;
+            font-family: "Helvetica Ligth";
             font-size: 12px;
             line-height: 141%;
         }
@@ -905,6 +977,7 @@
             margin-left: auto;
             margin-right: auto;
             padding: 5px;
+            margin-bottom: 0;
         }
         
         .payment_method h3 {
@@ -918,8 +991,8 @@
         }
         
         .payment_method a span.body_text {
-            color: #4377A7;
-            cursor: pointer;
+            /* color: #4377A7;
+            cursor: pointer;*/
         }
         /* Табы */
         
@@ -936,7 +1009,7 @@
             font-family: "Helvetica Ligth";
             font-size: 18px;
             line-height: 21px;
-            border: 2px solid #CC6F3A;
+            border: 1px solid #CC6F3A;
             box-sizing: border-box;
             border-radius: 10px;
             width: 240px;
@@ -954,6 +1027,10 @@
         .lp-tabs .lp-tabs-titles ul li:hover,
         .lp-tabs .lp-tabs-titles ul li.active {
             border: 2px solid #47A1D4;
+        }
+        
+        .lp-tabs .lp-tabs-titles ul li.active {
+            display: none;
         }
         
         .lp-tabs .lp-tabs-content {
@@ -1117,6 +1194,25 @@
         
         .marginBottom {
             margin-bottom: 120px;
+        }
+        /*links*/
+        
+        a span.body_text {
+            color: #47A1D4;
+            cursor: pointer;
+        }
+        
+        a:hover span.body_text {
+            color: #4377A7;
+        }
+        
+        .developer a {
+            color: #47A1D4 !important;
+        }
+        
+        .developer a:hover,
+        .main_navigation a:hover {
+            color: #4377A7 !important;
         }
         
         @media screen and (min-width: 320px) and (max-width: 991px) {
@@ -1375,7 +1471,6 @@
             .footer_bottom_text span {
                 margin-right: 0px;
             }
-            .developer {}
             /*navigation*/
             .header_header {
                 margin-right: 6px;
