@@ -207,7 +207,8 @@
         
         .navigation_div {
             height: 100%;
-            margin: auto 200px auto 200px;
+            margin: auto;
+            min-width: 960px;
         }
         
         .dropdown_menu {
@@ -654,15 +655,7 @@
         
         .background_image_wrap_top {
             margin-top: 245px;
-            background: url(/assets/image/backgroundForm1.png) 100% 100% repeat-x;
-            background-size: auto 175px;
-            height: 175px;
-            background-position-x: center;
-        }
-        
-        .background_image_wrap_bottom {
-            margin-top: -10px;
-            background: url(/assets/image/backgroundForm2.png) 100% 100% repeat-x;
+            background: url(/assets/image/waves.png) 100% 100% no-repeat;
             background-size: auto 175px;
             height: 175px;
             background-position-x: center;
@@ -911,6 +904,7 @@
             display: block;
             margin-left: auto;
             margin-right: auto;
+            padding: 5px;
         }
         
         .payment_method h3 {
@@ -1125,7 +1119,7 @@
             margin-bottom: 120px;
         }
         
-        @media screen and (min-width: 320px) and (max-width: 1050px) {
+        @media screen and (min-width: 320px) and (max-width: 991px) {
             main {
                 padding-left: 15px;
                 padding-right: 15px;
@@ -1167,9 +1161,7 @@
             .footer_wrapper_image,
             .footer_wrapper_visa,
             .footer_bottom_text img,
-            .footer_bottom_text_rating,
-            .section_how_work .background_image,
-            .footer .background_image {
+            .footer_bottom_text_rating {
                 display: none;
             }
             /*font styles*/
@@ -1272,10 +1264,17 @@
                 width: 100%;
             }
             .section_how_work {
-                margin: auto 0px auto -15px;
-                background: #E9B482;
+                margin: auto;
+                width: 100%;
+            }
+            .section_how_work .background_image {
+                position: absolute;
+                left: 0;
                 width: 100vw;
-                padding-bottom: 15px;
+                height: 570px;
+                background: #E9B482;
+                z-index: -1;
+                display: block;
             }
             .section_how_work h2 {
                 margin-bottom: 35px;
@@ -1329,7 +1328,7 @@
             }
             .background_image_wrap_top {
                 margin-top: 268px;
-                background-size: auto 95px;
+                background-size: 100vw 95px;
                 height: 175px;
                 background-position-x: 0%;
             }
@@ -1458,5 +1457,66 @@
             }
             #aviatours h1 {
                 margin-bottom: 30px;
+            }
+        }
+        
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+            .section_find_tour_lookfor {
+                width: 50%;
+                height: auto;
+            }
+            .section_from_fly_div {
+                width: 30%;
+            }
+            .section_like_rest_block img {
+                width: 48%;
+            }
+            .section_like_rest_block_text {
+                width: 48%;
+                margin-top: 0;
+            }
+            .section_contacts_map {
+                width: 50%;
+                height: 100%;
+            }
+            .section_contacts_map img {
+                width: 100%;
+            }
+            .section_contacts_info {
+                margin-top: 0px;
+            }
+            .lp-tabs .lp-tabs-titles ul li {
+                width: 23%;
+            }
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 991px) {
+            .section_from_fly_block {
+                justify-content: space-around;
+            }
+            .section_from_fly_div {
+                width: 45%;
+            }
+            .section_how_work {
+                margin: auto;
+                width: 100%;
+            }
+            .section_how_work .background_image {
+                position: absolute;
+                left: 0;
+                width: 100vw;
+                height: 570px;
+                background: #E9B482;
+                z-index: -1;
+                display: block;
+            }
+            .footer_wrapper_visa {
+                display: block;
+            }
+        }
+        
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            .lp-tabs .lp-tabs-titles ul li {
+                width: 45%;
             }
         }
