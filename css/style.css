@@ -413,6 +413,12 @@
             margin: auto 43px 83px 13px;
         }
         
+        a .section_from_fly_div:hover {
+            border: 1px solid #E9B482 !important;
+            /*  background: transparent;
+            color: #CC6F3A;*/
+        }
+        
         .section_from_fly_block {
             flex-wrap: wrap;
             justify-content: space-between;
@@ -439,6 +445,20 @@
             z-index: 5;
             padding: 4px;
             background-color: white;
+        }
+        
+        .section_from_fly_div svg {
+            top: -21px;
+            right: -21px;
+            z-index: 5;
+            /* padding: 4px; */
+            background-color: white;
+            position: absolute;
+            /* margin: -5px; */
+        }
+        
+        a .section_from_fly_div:hover svg path {
+            fill: #E9B482;
         }
         
         .section_from_fly_div h5 {}
@@ -1026,7 +1046,7 @@
         
         .lp-tabs .lp-tabs-titles ul li:hover,
         .lp-tabs .lp-tabs-titles ul li.active {
-            border: 2px solid #47A1D4;
+            border: 1px solid #E9B482;
         }
         
         .lp-tabs .lp-tabs-titles ul li.active {
