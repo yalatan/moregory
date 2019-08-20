@@ -12,39 +12,41 @@
 </head>
 
 <body>
-    <section class="section_form d-flex">
-        <form class="form">
-            <div class="form-group">
+    <section class="section_form">
+        <div class="section_form_wrap d-flex container">
+            <form class="form">
+                <div class="form-group">
 
-                <label for="name" class="body_text">Ваше имя</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Василий">
-            </div>
-            <div class="form-group">
+                    <label for="name" class="body_text">Ваше имя</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Василий">
+                </div>
+                <div class="form-group">
 
-                <label for="telefone" class="body_text">Номер телефона</label>
-                <input type="tel" class="form-control" aria-describedby="telefone" placeholder="+375295012433" id="telefone" pattern="\+{1,1}375[0-9]{6,9}">
-            </div>
-            <div class="form-group">
+                    <label for="telefone" class="body_text">Номер телефона</label>
+                    <input type="tel" class="form-control" aria-describedby="telefone" placeholder="+375295012433" id="telefone" pattern="\+{1,1}375[0-9]{6,9}">
+                </div>
+                <div class="form-group">
 
-                <label for="email" class="body_text">Адрес электронной почты</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="vasily.ivanov@gmail.com">
-            </div>
-            <div class="form-group" style="margin-bottom: 12px">
-                <label for="textarea" class="form_label body_text">Сообщение </label><br>
-                <textarea id="textarea" placeholder="Сообщение" onfocus="if (this.placeholder == 'Сообщение') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Сообщение';}"></textarea>
+                    <label for="email" class="body_text">Адрес электронной почты</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="vasily.ivanov@gmail.com">
+                </div>
+                <div class="form-group" style="margin-bottom: 12px">
+                    <label for="textarea" class="form_label body_text">Сообщение </label><br>
+                    <textarea id="textarea" placeholder="Сообщение" onfocus="if (this.placeholder == 'Сообщение') {this.placeholder = '';}" onblur="if (this.placeholder == '') {this.placeholder = 'Сообщение';}"></textarea>
 
-            </div>
-            <p class="form_text">Отправляя запрос, вы подтверждаете, что ознакомлены и согласны с нашими <span>Условиями
+                </div>
+                <p class="form_text">Отправляя запрос, вы подтверждаете, что ознакомлены и согласны с нашими <span>Условиями
           Пользования</span> и <span>Политикой Конфиденциальности</span></p>
-            <button type="submit" class="btn btn-primary  btn-block"><span class="button_text">Отправить
+                <button type="submit" class="btn btn-primary  btn-block"><span class="button_text">Отправить
           запрос</span></button>
-        </form>
-        <div class="section_form_block">
-            <h2>Нет времени на поиск?</h2>
-            <p class="body_text">Оставьте заявку! Мы подберем вам лучшее предложение!</p>
-        </div>
-        <div class="background_image">
-            <div class="background_image_wrap_top"></div>
+            </form>
+            <div class="section_form_block">
+                <h2>Нет времени на поиск?</h2>
+                <p class="body_text">Оставьте заявку! Мы подберем вам лучшее предложение!</p>
+            </div>
+            <!--  <div class="background_image">
+                <div class="background_image_wrap_top"></div>
+            </div>-->
         </div>
     </section>
     <script src="js/jquery-3.4.1.js"></script>

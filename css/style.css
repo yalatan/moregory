@@ -13,6 +13,12 @@
             src: url(../fonts/HelveticaRegular.ttf);
         }
         
+        html {
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+        
         h1 {
             font-family: "PF Din Text Cond Pro";
             font-size: 56px;
@@ -74,11 +80,22 @@
         a>*:hover,
         a>*:visited,
         a>svg:hover path,
-        a>svg:visited path {
+        a>svg:visited path,
+        a.telefone:hover h5,
+        a.telefone:hover h1 {
             color: #4377A7;
             fill: #4377A7;
             text-decoration: none;
             border: none !important;
+        }
+        
+        .header_info_contacts a>*:hover,
+        .header_info_contacts a>*:visited,
+        .header_info_contacts a>svg:hover path,
+        .header_info_contacts a>svg:visited path,
+        .nav-item a>svg:hover path {
+            color: #E9B482;
+            fill: #E9B482;
         }
         
         a span.body_text {
@@ -108,7 +125,10 @@
             transition: background-color 10s;
         }
         
-        body {}
+        body {
+            width: 100vw;
+            overflow-x: hidden !important;
+        }
         
         .body_text {
             font-family: "Helvetica Ligth";
@@ -118,7 +138,8 @@
         }
         
         .container {
-            overflow: visible;
+            /*overflow: visible;*/
+            overflow-x: hidden;
         }
         /*navigation*/
         
@@ -139,9 +160,10 @@
         
         .header_header {
             justify-content: space-between;
-            margin-left: 6px;
-            margin-top: 11px;
             align-items: center;
+            display: flex;
+            max-width: 1140px;
+            margin: 11px auto auto auto;
         }
         
         .logo {
@@ -214,14 +236,16 @@
         /*navigation*/
         
         .navigation {
-            display: flex;
+            width: 100vw;
+            margin: 0px auto;
+            /*  display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             height: 60px;
             width: 100vw;
             position: absolute;
             left: 0px;
-            padding: 0px;
+            padding: 0px;*/
             color: white;
             background-color: #2C4D8A;
         }
@@ -229,7 +253,8 @@
         .navigation_div {
             height: 100%;
             margin: auto;
-            min-width: 960px;
+            /* min-width: 960px;*/
+            width: min-content;
         }
         
         .dropdown_menu {
@@ -246,17 +271,19 @@
         }
         
         .navigation ul {
-            width: 1007px;
+            /* width: 1007px;*/
             margin: auto;
             /* padding-right: 96px; */
             height: 100%;
             list-style: none;
             padding-left: 0;
             justify-content: center;
+            width: min-content;
         }
         
         .navigation ul li {
-            height: 100%;
+            /* height: 100%;*/
+            height: 60px;
             position: relative;
             display: flex;
             align-items: center;
@@ -331,7 +358,8 @@
         
         .section_find_tour {
             justify-content: space-between;
-            margin: 61px 20px 120px 13px;
+            /* margin: 61px 20px 120px 13px;*/
+            margin: 60px auto 120px auto;
             /*mobile*/
             flex-wrap: wrap;
         }
@@ -373,7 +401,8 @@
         #section_hot_tours {}
         
         .section_hot_tours {
-            margin: auto 107px 87px 83px;
+            /* margin: auto 107px 87px 83px;*/
+            margin: auto auto 87px auto;
             text-align: center;
         }
         
@@ -392,29 +421,31 @@
         .section_hot_tours button {
             border: none !important;
             margin: 33px auto 33px auto;
-            background: #47A1D4;
+            background-color: #47A1D4;
             color: #fff;
             width: 300px;
             height: 50px;
             font-weight: bold;
-            -webkit-transition: background-color 2s;
-            transition: background-color 2s;
+            -webkit-transition: background-color 3s;
+            transition: background-color 3s;
         }
         
         .section_hot_tours button:hover {
-            background: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);
-            -webkit-transition: background-color 10s;
-            transition: background-color 10s;
+            /* background-color: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);*/
+            background-color: #ACCADB;
+            -webkit-transition: background-color 3s;
+            transition: background-color 3s;
         }
         /*section_from_fly */
         
         .section_from_fly {
             text-align: center;
-            margin: auto 43px 83px 13px;
+            /* margin: auto 43px 83px 13px;*/
+            margin: auto auto 83px auto;
         }
         
         a .section_from_fly_div:hover {
-            border: 1px solid #E9B482 !important;
+            border: 2px solid #E9B482 !important;
             /*  background: transparent;
             color: #CC6F3A;*/
         }
@@ -429,7 +460,7 @@
         }
         
         .section_from_fly_div {
-            border: 2px solid #E9B482;
+            border: 2px solid #CC6F3A;
             box-sizing: border-box;
             border-radius: 10px;
             width: 332px;
@@ -466,7 +497,8 @@
         
         .section_bus_tour {
             text-align: center;
-            margin: auto 43px 120px 15px;
+            /*  margin: auto 43px 120px 15px;*/
+            margin: auto auto 120px auto;
         }
         
         .section_bus_tour h2 {
@@ -482,9 +514,16 @@
         }
         /*section_like_rest*/
         
+        #section_like_rest {
+            height: auto;
+            overflow-y: visible;
+        }
+        
         .section_like_rest {
             text-align: center;
-            margin: auto 43px 60px 15px;
+            /* margin: auto 43px 60px 15px;*/
+            margin: auto auto 60px auto;
+            height: auto;
         }
         
         .section_like_rest h2 {
@@ -540,8 +579,10 @@
         
         .section_how_work {
             text-align: center;
-            margin: auto auto 230px auto;
+            margin: auto auto 120px auto;
             width: 100%;
+            background: #E9B482;
+            padding-bottom: 110px;
         }
         
         .section_how_work h2 {
@@ -596,8 +637,20 @@
         /*section_form*/
         
         .section_form {
-            margin: auto 30px 120px 15px;
+            /* margin: auto 30px 120px 15px;
+            justify-content: space-between;*/
+            margin: auto auto 120px auto;
+            background: url(/assets/image/waves.png) 100% 100% no-repeat;
+            background-size: auto 350px;
+            /*  height: 350px;*/
+            background-position-x: center;
+            background-position-y: center;
+        }
+        
+        .section_form_wrap {
+            margin: 0px auto;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         
         .form {
@@ -740,7 +793,8 @@
         
         .section_faq {
             text-align: center;
-            margin: auto 35px 80px 15px;
+            /*margin: auto 35px 80px 15px;*/
+            margin: auto auto 80px auto;
         }
         
         .section_faq h2 {
@@ -827,7 +881,8 @@
         /*contacts*/
         
         .section_contacts {
-            margin: auto 44px 15px 15px;
+            /*margin: auto 44px 15px 15px;*/
+            margin: auto auto 15px auto;
             padding-top: 17px;
             justify-content: space-between;
         }
@@ -889,8 +944,9 @@
         .footer {
             align-items: center;
             align-content: center;
-            margin: auto 60px 15px 15px;
+            margin: auto 0px 15px 0px;
             height: 260px;
+            background: #E9B482;
         }
         
         .footer .background_image {
@@ -932,9 +988,10 @@
             /* color: #47A1D4;*/
             margin-bottom: 5px;
         }
-        /*.footer_wrapper_div a:hover .footer_text {
-            color: #4377A7;
-        }*/
+        
+        .footer_wrapper_div a:hover .footer_text {
+            color: #47A1D4;
+        }
         
         #footer_section {
             margin-bottom: 15px;
@@ -977,13 +1034,29 @@
             line-height: 141%;
         }
         
-        .main_navigation_last_li a {
+        .main_navigation ul li:not(:last-child) a {
+            color: #47A1D4;
+        }
+        
+        .main_navigation ul li:not(:last-child) {
+            color: #47A1D4;
+            cursor: pointer;
+        }
+        
+        .main_navigation ul li:last-child,
+        .main_navigation ul li:last-child:hover {
+            color: #231F20;
+        }
+        
+        .main_navigation ul li:last-child a,
+        .main_navigation ul li:last-child a:hover {
             color: #231F20;
         }
         
         .payment_method {
             text-align: center;
-            margin: 52px 45px 160px 15px;
+            /*  margin: 52px 45px 160px 15px;*/
+            margin: 52px auto 160px auto;
         }
         
         .payment_method h1 {
@@ -1070,6 +1143,10 @@
             margin-bottom: 60px;
         }
         
+        .payment_method_block h3 {
+            text-align: left;
+        }
+        
         .lp-tabs ol {
             text-align: left;
             padding-left: 25px;
@@ -1098,17 +1175,16 @@
         
         #aviatours {
             text-align: center;
-            margin-top: 60px;
-            margin-right: 30px;
+            margin: 60px auto 120px auto;
         }
         
         #aviatours h1 {
-            margin-bottom: 5px;
+            margin-bottom: 60px;
         }
         
         .aviatours_section {
             justify-content: space-between;
-            margin: 60px 20px 120px 13px;
+            margin: 0px auto;
         }
         
         .aviatours_section_lookfor {
@@ -1138,7 +1214,7 @@
         }
         
         #bustour h1 {
-            margin: 60px 30px 60px auto;
+            margin: 60px auto 60px auto;
         }
         
         #bustour .section_bus_tour h2 {
@@ -1147,7 +1223,8 @@
         
         .section_questions {
             text-align: center;
-            margin: 52px 45px 120px 15px;
+            /* margin: 52px 45px 120px 15px;*/
+            margin: 52px auto 120px auto;
         }
         
         .section_questions h1 {
@@ -1188,8 +1265,7 @@
         }
         
         .section_questions_wrapper a:hover {
-            border: 2px solid #4377A7;
-            ;
+            border: 2px solid #E9B482;
         }
         
         .aboutavia .section_questions_wrapper,
@@ -1237,18 +1313,23 @@
         
         @media screen and (min-width: 320px) and (max-width: 991px) {
             main {
-                padding-left: 15px;
-                padding-right: 15px;
-                margin-top: 40px;
+                /* padding-left: 15px;
+                padding-right: 15px;*/
+                margin-top: 120px;
             }
             .container {
                 padding: 0;
+                width: 100%;
             }
             .header_div_menu {
                 display: block;
             }
             .menu_close {
                 display: none;
+            }
+            .menu_open img {
+                height: 45px;
+                width: 40px;
             }
             .header_info,
             .navigation {
@@ -1264,7 +1345,9 @@
             .section_contacts,
             .payment_method,
             #aviatours {
-                margin: auto 4px 40px 4px;
+                margin-bottom: 40px;
+                padding-left: 15px;
+                padding-right: 15px;
             }
             .section_find_tour,
             .section_from_fly_block {
@@ -1312,8 +1395,17 @@
             }
             /*header*/
             .header {
-                margin-bottom: 10px;
-                height: 70px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                z-index: 200;
+            }
+            .header .container {
+                margin: 0;
+            }
+            .header .d-flex {
+                margin: 0;
             }
             .header_header {
                 height: 100%;
@@ -1382,6 +1474,7 @@
             .section_how_work {
                 margin: auto;
                 width: 100%;
+                padding-bottom: 0px;
             }
             .section_how_work .background_image {
                 position: absolute;
@@ -1413,6 +1506,7 @@
             /*section_form*/
             .section_form {
                 flex-wrap: wrap;
+                background-size: auto 175px;
             }
             .section_form_block h2 {
                 margin-bottom: 30px;
@@ -1466,7 +1560,7 @@
                 margin-bottom: 25px;
             }
             .section_contacts_info .nav {
-                margin: 15px auto;
+                margin: 25px auto 15px auto;
             }
             .section_contacts_info button {
                 margin: 20px auto;
@@ -1493,9 +1587,12 @@
             }
             /*navigation*/
             .header_header {
-                margin-right: 6px;
+                /* margin-right: 6px;*/
                 box-shadow: 0px 4px 4px rgba(1, 50, 107, 0.2);
                 padding-left: 15px;
+                width: 100vw;
+                background-color: #ffffff;
+                margin: 0 !important;
             }
             .header_div_menu {
                 margin-right: 30px;
@@ -1509,6 +1606,7 @@
             .navigation_div {
                 height: auto;
                 margin: auto;
+                width: 100%;
                 /* border: 1px solid blue;*/
             }
             .navigation ul {
@@ -1633,5 +1731,11 @@
         @media screen and (min-width: 320px) and (max-width: 767px) {
             .lp-tabs .lp-tabs-titles ul li {
                 width: 45%;
+            }
+        }
+        
+        @media screen and (min-width: 320px) and (max-width: 400px) {
+            .section_from_fly_div {
+                width: 280px;
             }
         }
