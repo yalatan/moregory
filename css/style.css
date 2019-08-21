@@ -67,6 +67,19 @@
             color: #47A1D4;
             margin-bottom: 0;
         }
+        /*fixed_elements*/
+        
+        .fixed_elements {
+            position: fixed;
+            bottom: 63px;
+            right: 80px;
+        }
+        
+        .fixed_elements span {
+            margin-left: 9px;
+            margin-right: 8px;
+            cursor: pointer;
+        }
         
         .text-white h6,
         .navigation .dropdown-item h6 {
@@ -81,7 +94,6 @@
         a>*:visited,
         a>svg:hover path,
         a>svg:visited path,
-        a.telefone:hover h5,
         a.telefone:hover h1 {
             color: #4377A7;
             fill: #4377A7;
@@ -93,7 +105,8 @@
         .header_info_contacts a>*:visited,
         .header_info_contacts a>svg:hover path,
         .header_info_contacts a>svg:visited path,
-        .nav-item a>svg:hover path {
+        .nav-item a>svg:hover path,
+        a.telefone:hover h5 {
             color: #E9B482;
             fill: #E9B482;
         }
@@ -111,6 +124,7 @@
             border-radius: 10px !important;
             -webkit-transition: background-color 5s;
             transition: background-color 5s;
+            outline: none !important;
         }
         
         .button_text {
@@ -299,8 +313,8 @@
             opacity: 1;
             visibility: visible;
             transition-property: opacity, visibility;
-            transition-duration: 1s;
-            transition-delay: 0.25s;
+            transition-duration: 0.5s;
+            transition-delay: 0.15s;
         }
         
         .navigation h6 {
@@ -431,8 +445,8 @@
         }
         
         .section_hot_tours button:hover {
-            /* background-color: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);*/
-            background-color: #ACCADB;
+            background: linear-gradient(136.37deg, #ACCADB 14.63%, #47A1D4 85.37%);
+            /* background-color: #ACCADB;*/
             -webkit-transition: background-color 3s;
             transition: background-color 3s;
         }
@@ -524,6 +538,7 @@
             /* margin: auto 43px 60px 15px;*/
             margin: auto auto 60px auto;
             height: auto;
+            overflow: hidden;
         }
         
         .section_like_rest h2 {
@@ -564,11 +579,13 @@
             left: 0rem;
             border: 1px solid #CC6F3A;
             font-weight: bold;
+            background: transparent;
+            outline: none;
+            cursor: pointer;
         }
         
         .section_like_rest_block_text button:hover {
             border: 1px solid #E9B482;
-            background: transparent;
             color: #CC6F3A;
         }
         
@@ -1311,11 +1328,21 @@
             color: #4377A7 !important;
         }
         
+        .section_faq {
+            display: none;
+        }
+        
         @media screen and (min-width: 320px) and (max-width: 991px) {
             main {
                 /* padding-left: 15px;
                 padding-right: 15px;*/
                 margin-top: 120px;
+            }
+            /*fixed_elements*/
+            .fixed_elements {
+                bottom: 15px;
+                right: 10px;
+                z-index: 500;
             }
             .container {
                 padding: 0;
@@ -1635,6 +1662,9 @@
                 flex-wrap: wrap;
                 width: 100%;
             }
+            .navigation ul li:hover {
+                background-color: #ffffff;
+            }
             .main_navigation a {
                 width: max-content;
             }
@@ -1644,6 +1674,10 @@
                 opacity: 1;
                 visibility: visible;
                 width: 100%;
+                display: none;
+            }
+            .show .dropdown_menu {
+                display: block;
             }
             /*nav end*/
             .lp-tabs .lp-tabs-titles ul li {
