@@ -23,7 +23,7 @@
                 tabsContentTabs = tabsContent.find('.lp-tab'); /* Набор вкладок*/
             /* Добавляем заголовки вкладок*/
             tabsTitlesNames.forEach(function(value) {
-                tabsTitles.find('ul').append('<li><h5>' + value + '</h5></li>');
+                tabsTitles.find('ul').append('<li><h2 class="h5">' + value + '</h2></li>');
             });
             /* Помещаем в переменную набор заголовков вкладок*/
             var tabsTitlesItems = tabsTitles.find('ul li');
